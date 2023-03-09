@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Salsa', cursive;
+}
+
+body{
+    background-color: rgb(14, 13, 13);
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* NAV */
+
+li{
+    list-style: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    position: absolute;
+    width: 100%;
+    transition: all 0.5s;
+    animation: navLogoArriba 1.5s ease;
+    transform: translateY(44vh);
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+nav ul li{
+    margin: 0 20px 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo{
+    font-weight: 900;
+    font-size: 40px;
+    transition: opacity 0.5s;
+    animation: navLogo 1.5s ease;
+}
+
+nav ul li a{
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+nav ul li a:hover{
+    color: rgb(155, 152, 152) !important;
+}
+
+/* FOOTER */
+
+footer div ul li i, footer div ul li a{
+    color: white;
+    opacity: 0.6;
+    font-size: 18px;
+    padding: 10px;
+    transition: opacity 0.3s;
+    text-align: right;
+    cursor: pointer;
+}
+
+footer div ul li i:hover, footer div ul li a:hover{
+    opacity: 1;
+}
+
+footer div ul{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+footer div{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* CARDS */
+
+main section ul {
+    display: grid;
+    grid-template-columns: repeat(6, fr);
+}
+
+main section ul div{
+    width: 700px;
+    height: 100vh;
+    z-index: -1;
+    transform: skewX(-20deg);;
+}
+
+
+/* KEYFRAMES */
+
+@keyframes navLogo {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes navLogoArriba {
+    from {
+        transform: translateY(55vh);
+    }
+    to {
+        transform: translateY(44vh);
+    }
+  }
