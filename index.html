@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/bd3a6ec486.js" crossorigin="anonymous"></script>
-    <title>Title Pagina</title>
+    <title>VOLANTER</title>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo"><a href="./index.html">TITULO PAGINA</a></div>
+            <div class="logo"><a href="./index.html">VOLANTER</a></div>
             <ul>
                 <li><a href="#">CONTACTENOS</a></li>
                 <li><a href="#">ACERCA DE</a></li>
@@ -28,12 +28,31 @@
     <main>
         <section>
             <ul>
-                <div style="background-color: red;"></div>
-                <div style="background-color: blue;"></div>
-                <div style="background-color: yellow;"></div>
-                <div style="background-color: green;"></div>
-                <div style="background-color: orange;"></div>
-                <div style="background-color: white;"></div>
+                <li>
+                    <div id="imgMain" style="background-image: url(//media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/darksouls/background_c.jpg);"></div>
+                    <div class="capa"></div>
+                </li>
+                <li>
+                    <div id="imgMain" style="background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/sekiro/background_c.jpg);"></div>
+                    <div class="capa"></div>
+                    <img class="logoJuego" src="https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/logo/sekiro.png">
+                </li>
+                <li>
+                    <div id="imgMain" style="background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/ac6/background_c.jpg);"></div>
+                    <div class="capa"></div>
+                </li>
+                <li>
+                    <div id="imgMain" style="background-image: url(//media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/eldenring/background_c.jpg);"></div>
+                    <div class="capa"></div>
+                </li>
+                <li>
+                    <div id="imgMain" style="background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/bloodborne/background_c.jpg);"></div>
+                    <div class="capa"></div>
+                </li>
+                <li>
+                    <div id="imgMain" style="background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/deracine/background_c.jpg);"></div>
+                    <div class="capa"></div>
+                </li>
             </ul>
         </section>
     </main>
@@ -55,5 +74,27 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+
+        arrayColores = []
+
+        document.addEventListener("mouseover", (e) => {
+
+            if(arrayColores.length == 0 && e.target.className == "capa"){
+
+                arrayColores.push(e.target.previousElementSibling)
+                e.target.previousElementSibling.style.filter = "grayscale(0%)"
+            }
+
+            if(arrayColores.length != 0 && e.target.className == "capa"){
+
+                arrayColores.push(e.target.previousElementSibling)
+                arrayColores[0].style.filter = "grayscale(100%)"
+                arrayColores.shift()
+                arrayColores[0].style.filter = "grayscale(0%)"
+            }
+        })
+    </script>
 </body>
 </html>

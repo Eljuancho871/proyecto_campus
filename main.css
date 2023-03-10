@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Salsa', cursive;
+    transition: filter 0.5s;
 }
 
 body{
@@ -30,6 +31,7 @@ nav{
     transition: all 0.5s;
     animation: navLogoArriba 1.5s ease;
     transform: translateY(44vh);
+    z-index: 100;
 }
 
 nav ul{
@@ -87,22 +89,54 @@ footer div{
     bottom: 30px;
     opacity: 0;
     transition: opacity 0.3s;
+    z-index: 100;
 }
 
 /* CARDS */
 
+
 main section ul {
     display: grid;
-    grid-template-columns: repeat(6, fr);
+    grid-template-columns: repeat(6, 1fr);
+    transform: translateX(-9%);
 }
 
-main section ul div{
-    width: 700px;
+main section ul li{
+    transition: width 0.8s, left 0.5s;
+    width: calc((100vw / 4) - 103px);
     height: 100vh;
     z-index: -1;
-    transform: skewX(-20deg);;
+    transform: skewX(-20deg);
+    overflow: hidden;
 }
 
+main section ul li div{
+    transform: skewX(20deg);
+    position: absolute;
+    width: 200%;
+    right: -50%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    filter: grayscale(100%);
+}
+
+main section ul li:hover {
+    width: calc((100vw / 4) + 50px);
+}
+
+.capa{
+    width: 200%;
+    right: -180px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.377);
+    z-index: 100;
+}
+
+.logoJuego{
+    width: 200px;
+}
 
 /* KEYFRAMES */
 
