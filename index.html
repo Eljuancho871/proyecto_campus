@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="nav">
             <div class="logo"><a href="./index.html">VOLANTER</a></div>
             <ul>
                 <li><a href="#">CONTACTENOS</a></li>
@@ -28,30 +28,36 @@
     <main>
         <section>
             <ul>
-                <li>
+                <li class="liAnimacion">
                     <div id="imgMain" style="background-image: url(//media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/darksouls/background_c.jpg);"></div>
                     <div class="capa"></div>
+                    <img class="logoJuego " src="https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/logo/sekiro.png">
                 </li>
-                <li>
-                    <div id="imgMain" style="background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/sekiro/background_c.jpg);"></div>
+                <li class="liAnimacion">
+                    <div id="imgMain" style="background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/sekiro/background_c.jpg);right: -90%;"></div>
                     <div class="capa"></div>
                     <img class="logoJuego" src="https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/logo/sekiro.png">
                 </li>
-                <li>
-                    <div id="imgMain" style="background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/ac6/background_c.jpg);"></div>
+                <li id="animacionBorde" style="border-right:1px solid rgba(255, 255, 255, 0.877) ;
+                border-left: 1px solid rgba(255, 255, 255, 0.877) ;">
+                    <div id="imgMainAnimacion" style="background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/ac6/background_c.jpg);"></div>
                     <div class="capa"></div>
+                    <img class="logoJuego" src="https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/logo/sekiro.png">
                 </li>
-                <li>
+                <li class="liAnimacion">
                     <div id="imgMain" style="background-image: url(//media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/eldenring/background_c.jpg);"></div>
                     <div class="capa"></div>
+                    <img class="logoJuego" src="https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/logo/sekiro.png">
                 </li>
-                <li>
+                <li class="liAnimacion">
                     <div id="imgMain" style="background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/bloodborne/background_c.jpg);"></div>
                     <div class="capa"></div>
+                    <img class="logoJuego" src="https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/logo/sekiro.png">
                 </li>
-                <li>
+                <li class="liAnimacion">
                     <div id="imgMain" style="background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/deracine/background_c.jpg);"></div>
                     <div class="capa"></div>
+                    <img class="logoJuego" src="https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/logo/sekiro.png">
                 </li>
             </ul>
         </section>
@@ -79,22 +85,59 @@
 
         arrayColores = []
 
-        document.addEventListener("mouseover", (e) => {
+        const hoverImg = () => {
+            document.addEventListener("mouseover", (e) => {
 
-            if(arrayColores.length == 0 && e.target.className == "capa"){
+                if(arrayColores.length == 0 && e.target.className == "capa"){
+    
+                    arrayColores.push({ "color": e.target.previousElementSibling, "title": e.target.nextElementSibling })
+                    e.target.previousElementSibling.style.filter = "grayscale(0%)"
+                    e.target.nextElementSibling.style.opacity = "1"
+                }
+    
+                if(arrayColores.length != 0 && e.target.className == "capa"){
+    
+                    arrayColores.push({ "color": e.target.previousElementSibling, "title": e.target.nextElementSibling })
+                    arrayColores[0].title.style.opacity = "0"
+                    arrayColores[0].color.style.filter = "grayscale(100%)"
+                    arrayColores.shift()
+                    arrayColores[0].color.style.filter = "grayscale(0%)"
+                    arrayColores[0].title.style.opacity = "1"
+                }
+            })
+        }
 
-                arrayColores.push(e.target.previousElementSibling)
-                e.target.previousElementSibling.style.filter = "grayscale(0%)"
-            }
+        let animacionBorde = document.getElementById("animacionBorde")
+        let imgMain = document.querySelectorAll("#imgMain")
+        let liAnimacion = document.querySelectorAll(".liAnimacion")
+        let imgMainAnimacion = document.getElementById("imgMainAnimacion")
+        let nav = document.querySelector("nav")
+        
+        setTimeout(hoverImg, 5000);
 
-            if(arrayColores.length != 0 && e.target.className == "capa"){
+        setTimeout(() => {
 
-                arrayColores.push(e.target.previousElementSibling)
-                arrayColores[0].style.filter = "grayscale(100%)"
-                arrayColores.shift()
-                arrayColores[0].style.filter = "grayscale(0%)"
-            }
-        })
+            animacionBorde.style.height = "100vh"
+        }, 2000);
+
+        setTimeout(() => {
+
+            imgMainAnimacion.style.opacity = "1"
+            liAnimacion.forEach((e) => {
+
+                e.style.height = "100vh"
+            })
+        }, 3500);
+
+        setTimeout(() => {
+
+            imgMain.forEach((e) => {
+
+                e.style.opacity = "1"
+                animacionBorde.style.border = "none"
+            })
+        }, 4500);
+
     </script>
 </body>
 </html>

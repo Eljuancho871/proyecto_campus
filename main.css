@@ -22,7 +22,7 @@ li{
     list-style: none;
 }
 
-nav{
+.nav{
     display: flex;
     justify-content: space-between;
     padding: 40px;
@@ -30,7 +30,6 @@ nav{
     width: 100%;
     transition: all 0.5s;
     animation: navLogoArriba 1.5s ease;
-    transform: translateY(44vh);
     z-index: 100;
 }
 
@@ -49,7 +48,7 @@ nav ul li{
     font-weight: 900;
     font-size: 40px;
     transition: opacity 0.5s;
-    animation: navLogo 1.5s ease;
+    animation: navLogo 2.5s ease;
 }
 
 nav ul li a{
@@ -102,9 +101,9 @@ main section ul {
 }
 
 main section ul li{
-    transition: width 0.8s, left 0.5s;
-    width: calc((100vw / 4) - 103px);
-    height: 100vh;
+    transition: all 0.8s, left 0.5s, border 0.3s;
+    width: calc((100vw / 5));
+    height: 0vh;
     z-index: -1;
     transform: skewX(-20deg);
     overflow: hidden;
@@ -112,14 +111,16 @@ main section ul li{
 
 main section ul li div{
     transform: skewX(20deg);
+    transition: opacity 0.8s;
     position: absolute;
-    width: 200%;
-    right: -50%;
+    width: 250%;
+    right: -55%;
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
     filter: grayscale(100%);
+    opacity: 0;
 }
 
 main section ul li:hover {
@@ -127,8 +128,8 @@ main section ul li:hover {
 }
 
 .capa{
-    width: 200%;
-    right: -180px;
+    width: 250%;
+    right: -55%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.377);
     z-index: 100;
@@ -136,7 +137,16 @@ main section ul li:hover {
 
 .logoJuego{
     width: 200px;
-}
+    z-index: 100;
+    transition: all .5s;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+  }
 
 /* KEYFRAMES */
 
@@ -154,6 +164,6 @@ main section ul li:hover {
         transform: translateY(55vh);
     }
     to {
-        transform: translateY(44vh);
+        transform: translateY(0vh);
     }
   }
