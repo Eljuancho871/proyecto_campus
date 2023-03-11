@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Salsa', cursive;
+    transition: filter 0.5s;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(14, 13, 13);
+    overflow: hidden;
+}
+
+li{
+    list-style: none;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    position: absolute;
+    width: 100%;
+    transition: all 0.5s;
+    animation: navLogoArriba 1.5s ease;
+    z-index: 100;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+nav ul li{
+    margin: 0 20px 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo{
+    font-weight: 900;
+    font-size: 40px;
+    transition: opacity 0.5s;
+    animation: navLogo 2.5s ease;
+}
+
+nav ul li a{
+    transition: all 0.3s;
+}
+
+nav ul li a:hover{
+    color: rgb(187, 185, 185) !important;
+}
+
+
+footer div ul li i, footer div ul li a{
+    color: white;
+    opacity: 0.9;
+    font-size: 18px;
+    padding: 10px;
+    transition: opacity 0.3s;
+    text-align: right;
+    cursor: pointer;
+}
+
+footer div ul li i:hover, footer div ul li a:hover{
+    opacity: 0.7;
+}
+
+footer div ul{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+footer div{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    transition: opacity 0.3s;
+    z-index: 100;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.616);
+}
