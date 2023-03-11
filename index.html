@@ -34,18 +34,18 @@
                     <img class="logoJuego " src="https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/logo/sekiro.png">
                 </li>
                 <li class="liAnimacion">
-                    <div id="imgMain" style="background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/sekiro/background_c.jpg);right: -90%;"></div>
+                    <div id="imgMain" style="background-image: url(./img/mario.jpg);right: -90%;"></div>
                     <div class="capa"></div>
                     <img class="logoJuego" src="https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/logo/sekiro.png">
                 </li>
                 <li id="animacionBorde" style="border-right:1px solid rgba(255, 255, 255, 0.877) ;
                 border-left: 1px solid rgba(255, 255, 255, 0.877) ;">
-                    <div id="imgMainAnimacion" style="background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/ac6/background_c.jpg);"></div>
+                    <div id="imgMainAnimacion" style="background-image: url(//media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/eldenring/background_c.jpg);"></div>
                     <div class="capa"></div>
                     <img class="logoJuego" src="https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/logo/sekiro.png">
                 </li>
                 <li class="liAnimacion">
-                    <div id="imgMain" style="background-image: url(//media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/eldenring/background_c.jpg);"></div>
+                    <div id="imgMain" style="background-image: url(./img/pacman.jpg);"></div>
                     <div class="capa"></div>
                     <img class="logoJuego" src="https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/logo/sekiro.png">
                 </li>
@@ -55,7 +55,7 @@
                     <img class="logoJuego" src="https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/logo/sekiro.png">
                 </li>
                 <li class="liAnimacion">
-                    <div id="imgMain" style="background-image: url(https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/deracine/background_c.jpg);"></div>
+                    <div id="imgMain" style="background-image: url(./img/dragon.png);"></div>
                     <div class="capa"></div>
                     <img class="logoJuego" src="https://media.fromsoftware.jp/fromsoftware/jp/static/img/top/pc/logo/sekiro.png">
                 </li>
@@ -112,7 +112,8 @@
         let liAnimacion = document.querySelectorAll(".liAnimacion")
         let imgMainAnimacion = document.getElementById("imgMainAnimacion")
         let nav = document.querySelector("nav")
-        
+        let navA = document.querySelectorAll("nav ul li a")
+        let footer = document.querySelector("footer div")
         setTimeout(hoverImg, 5000);
 
         setTimeout(() => {
@@ -135,6 +136,11 @@
 
                 e.style.opacity = "1"
                 animacionBorde.style.border = "none"
+            })
+            footer.style.opacity = "1"
+            
+            navA.forEach((e) => {
+                e.style.opacity = "1"
             })
         }, 4500);
 

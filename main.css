@@ -57,14 +57,14 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: rgb(155, 152, 152) !important;
+    color: rgb(187, 185, 185) !important;
 }
 
 /* FOOTER */
 
 footer div ul li i, footer div ul li a{
     color: white;
-    opacity: 0.6;
+    opacity: 0.9;
     font-size: 18px;
     padding: 10px;
     transition: opacity 0.3s;
@@ -73,7 +73,7 @@ footer div ul li i, footer div ul li a{
 }
 
 footer div ul li i:hover, footer div ul li a:hover{
-    opacity: 1;
+    opacity: 0.7;
 }
 
 footer div ul{
@@ -89,6 +89,8 @@ footer div{
     opacity: 0;
     transition: opacity 0.3s;
     z-index: 100;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.616);
 }
 
 /* CARDS */
