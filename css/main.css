@@ -25,7 +25,7 @@ li{
 .nav{
     display: flex;
     justify-content: space-between;
-    padding: 40px;
+    padding: 20px;
     position: absolute;
     width: 100%;
     transition: all 0.5s;
@@ -140,7 +140,7 @@ main section ul li:hover {
 .logoJuego{
     width: 200px;
     z-index: 100;
-    transition: all .5s;
+    transition: all .3s;
     position: absolute;
     right: 0;
     top: 0;
@@ -169,3 +169,80 @@ main section ul li:hover {
         transform: translateY(0vh);
     }
   }
+
+@media (max-width: 850px) {
+    body {
+        overflow: visible;
+    }
+    main section ul li {
+        transform: skewX(0deg);
+    }
+    main section ul li div {
+        transform: skewX(0deg);
+        filter: grayscale(0%);
+    }
+    main section ul li {
+        width: calc((100vw / 2));
+    }
+    main section ul li:hover {
+        width: calc((100vw / 2));
+    }
+    main section ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        transform: translateX(0%);
+        width: 100%;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 850px) {
+    footer div {
+        position: inherit;
+        margin-top: 40px;
+        bottom: 0;
+    }
+    main section ul li div {
+        position: inherit;
+        width: 100%;
+        right: 0%;
+    }    
+    .logoJuego{
+        display: none;
+    }
+    .capa{
+        display: none;
+    }
+    body{
+        overflow-y: visible;
+    } 
+    .nav {
+        position: inherit;
+    }
+    nav ul{
+        display: none;
+    }
+
+    footer div ul li i, footer div ul li a {
+        color: white;
+        opacity: 0.9;
+        font-size: 14px;
+        padding: 10px;
+        transition: opacity 0.3s;
+        text-align: right;
+        cursor: pointer;
+    }
+    footer div {
+        position: inherit;
+        margin-top: 30px;
+    }
+
+    .capa {
+        width: 100%;
+        right: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.377);
+        z-index: 100;
+    }
+    
+}

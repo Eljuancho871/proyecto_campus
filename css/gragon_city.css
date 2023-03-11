@@ -7,10 +7,27 @@
     color: whitesmoke;
     text-decoration: none;
 }
-
 body{
     background-color: rgb(14, 13, 13);
     overflow: hidden;
+}
+.fondo{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-image: url("https://i.ytimg.com/vi/PXXkleB3SoU/maxresdefault.jpg");
+}
+
+.fondo:before {
+	content:'';
+	position: absolute;
+        top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
 }
 
 li{
@@ -20,12 +37,12 @@ li{
 .nav{
     display: flex;
     justify-content: space-between;
-    padding: 40px;
-    position: absolute;
+    padding: 20px;
     width: 100%;
     transition: all 0.5s;
     animation: navLogoArriba 1.5s ease;
     z-index: 100;
+    position: relative;
 }
 
 nav ul{
@@ -78,9 +95,156 @@ footer div ul{
 footer div{
     position: absolute;
     right: 30px;
-    bottom: 30px;
+    bottom: 5px;
     transition: opacity 0.3s;
     z-index: 100;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.616);
+}
+
+main section{
+    z-index: 100;
+    position: relative;
+    padding: 20px;
+    background: #110f1563;
+    width: fit-content;
+    margin-left: 10px;
+    transform: translate(0px, 7vh);
+}
+
+.btn{
+    width:150px;
+    height:50px;
+    padding:10px;
+    border:solid 1px whitesmoke;
+    border-radius:40px;
+    box-shadow: 1px 10px 20px grey;
+    position:relative;
+    overflow:hidden;
+    cursor: pointer;
+    background: #0c0c0c;
+  }
+  .btn:before{
+    content:"DESCARGAR";
+    width:100%;
+    height: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    color: whitesmoke;
+    font-weight:bold;
+    position:absolute;
+    top:0;
+    left:0;
+    transition:all .8s ;
+  }
+  .btn:hover:before{
+    transform:translatey(-100%);
+    transition:all .8s ;
+  }
+  .btn:after{
+    content:"🎮";
+    background-color:mediumpurple;
+    font-size:100px;
+    width:100%;
+    height: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    color:white;
+    position:absolute;
+    top:100%;
+    left:0;
+    transition:all .8s ;
+  }
+  .btn:hover:after{
+    transform:translatey(-100%);
+    transition:all .8s ;
+  }
+
+.consolas{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.consolas li{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.descripcion{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.descripcion div p{
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 840px) {
+    .fondo{
+        position: inherit;
+        height:45vh;
+    }
+    footer div {
+        position: inherit;
+        margin-top: 40px;
+        bottom: 0;
+    }
+    .fondo:before{
+        position: inherit;
+    }
+    body{
+        overflow-y: visible;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+    }
+    main section {
+        transform: translate(0px, 0vh);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }    
+    nav ul{
+        display: none;
+    }
+
+    footer div ul li i, footer div ul li a {
+        color: white;
+        opacity: 0.9;
+        font-size: 14px;
+        padding: 10px;
+        transition: opacity 0.3s;
+        text-align: right;
+        cursor: pointer;
+    }
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .descripcion{
+        justify-content: center;
+    }
+    
+}
+
+@media (max-width: 425px){
+    .consolas {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        flex-direction: column;
+        width: 100%;
+    }
 }

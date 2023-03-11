@@ -17,7 +17,7 @@ body{
     height: 100vh;
     width: 100%;
     position: absolute;
-    background-image: url("https://fondosmil.com/fondo/29625.jpg");
+    background-image: url("https://blogger.googleusercontent.com/img/a/AVvXsEhsmMhM2xJC_gb5TSwzaVtG0RU-p2Zhh0JWdsnK4BelwU9TILO72nubISFmhOqTW_zWIH2x8ys2UL2vJ1NyR_AS8QMiKhwB0lOt7MDBI_P-PiY9Ugf-SrVIKgT2GkhS8RBIqRPdnyB1TIQ-k7lfyFtRczNnqGQbwi4JSia4tQ8wK78ekbFHSZey4FBZbw=s3840");
 }
 
 .fondo:before {
