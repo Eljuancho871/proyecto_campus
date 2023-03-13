@@ -20,6 +20,7 @@ body{
     background-image: url("https://i.ytimg.com/vi/PXXkleB3SoU/maxresdefault.jpg");
 }
 
+
 .fondo:before {
 	content:'';
 	position: absolute;
@@ -34,6 +35,13 @@ li{
     list-style: none;
 }
 
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav{
     display: flex;
     justify-content: space-between;
@@ -42,7 +50,13 @@ li{
     transition: all 0.5s;
     animation: navLogoArriba 1.5s ease;
     z-index: 100;
-    position: relative;
+    backdrop-filter: blur(10px);
+background: transparent;
+position: absolute;
+}
+
+.sinopsis{
+    width: 700px;
 }
 
 nav ul{
@@ -100,16 +114,16 @@ footer div{
     z-index: 100;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.616);
+    padding: 20px;
 }
 
 main section{
     z-index: 100;
     position: relative;
     padding: 20px;
-    background: #110f1563;
+    background: rgba(0, 0, 0, 0.616);
     width: fit-content;
-    margin-left: 10px;
-    transform: translate(0px, 7vh);
+    margin: 20px;
 }
 
 .btn{
