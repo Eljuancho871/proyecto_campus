@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sobre Nosotros</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+       <link rel="preconnect" href="https://fonts.googleapis.com" />
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+       <link
+         href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
+         rel="stylesheet"
+       />
+    
+    <style>
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.img{
+    width: 130px !important;
+}
+
+/* NAV */
+
+li{
+    list-style: none;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: inherit;
+    width: 100%;
+    transition: all 0.5s;
+    animation: navLogoArriba 1.5s ease;
+    z-index: 100;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+nav ul li{
+    margin: 0 20px 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo{
+    font-weight: 900;
+    font-size: 40px;
+    transition: opacity 0.5s;
+    animation: navLogo 2.5s ease;
+}
+
+nav ul li a{
+    transition: all 0.3s;
+}
+
+nav ul li a:hover{
+    color: rgb(187, 185, 185) !important;
+}
+
+/* FOOTER */
+
+footer div ul li i, footer div ul li a{
+    color: white;
+    opacity: 0.9;
+    font-size: 18px;
+    padding: 10px;
+    transition: opacity 0.3s;
+    text-align: right;
+    cursor: pointer;
+}
+
+footer div ul li i:hover, footer div ul li a:hover{
+    opacity: 0.7;
+}
+
+footer div ul{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+footer div{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 100;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.616);
+}
+
+      *{
+        color: white;
+        background-color: #05070f;
+        font-family: 'Salsa', cursive;
+      }
+      .f {
+        margin: 10px;
+        border-radius: 5px;
+        background-color: #201533;
+        padding: 10px;
+      }
+
+      .d {
+        background-color: #201533;
+        margin: 10px;
+        border-radius: 5px;
+        color: white;
+        padding: 15px;
+      }
+
+      .m {
+        background-color: #201533;
+        margin: 10px;
+        border-radius: 5px;
+        color: white;
+        padding: 10px;
+      }
+
+      .t{
+        color: white;
+        display: flex;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+      .k{
+        color: white;
+        display: flex;
+        font-family:  'Times New Roman', Times, serif;
+
+      }
+      .ft{
+        color: white;
+        display: flex;  
+        font-family: 'Courier New', Courier, monospace;
+      }
+      .x{
+        color: white;
+        margin-top: 90px;
+      }
+      .c{
+        color: white;
+        margin: 25px;
+      }
+      .trabajo{
+        border-radius: 10px;
+        border: 1px solid black;
+        background-color: white;
+        
+      }
+      .trabajo h1 a{
+        text-decoration: none;
+      }
+      .imgJuego{
+        width: 250px;
+      }
+      .container {
+        position: relative;
+      }
+      .container::before{
+        position: absolute;
+        content: "";
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+        filter: blur(60px);
+        top: 0;
+        left: 0;
+      }
+      .container::after{
+        position: absolute;
+        content: "";
+        width: 100px;
+        height: 100px;
+        background-color: rgb(150, 87, 209);
+        filter: blur(50px);
+        top: 20rem;
+        right:0 ;
+      }
+      
+    </style>
+  </head>
+
+<body>
+    <header>
+        <nav class="nav">
+          <div class="logo"><a style="color: white" href="./index.html">VOLANTER</a></div>
+          <ul>
+            <li><a href="./contacto.html">CONTACTENOS</a></li>
+            <li><a href="./sobreNosotros.html">ACERCA</a></li>
+            <li><a href="#">CLIENTES</a></li>
+            <li><a href="#">PRODUCTOS</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+    <div class="container">
+          <h1>Sobre nosotros:</h1>
+          <hr />
+          <div class="row">
+            <div class="col f vv">
+              joseph fabian valencia luna
+              <img class="img" src="/img/deportes-extremos.png" alt="" />
+              <br />
+              considerado el mejor diseñador web. joseph se encargo de averiguar a
+              detalle todo acerca del funcionamiento de los sistemas
+              computacionales.
+            </div>
+
+            <div class="col d vv">
+              juan diego mogotocoro diaz
+              <img class="img" src="/img/hombre.png" alt="" />
+              <br />
+              fue el encargado de modelar el inicio de la pagina.es uno de los
+              mayores conocedores en cuanto a lenguajes de programacion.
+            </div>
+
+            <div class="col m vv">
+              jhon jairo morales niño
+              <img class="img" src="/img/viajero.png" alt="" />
+              <br />
+              de el se sabe muy poco.en una ocasion me contaron que sabia mucho
+              javascript y que le encantaba comer empanadas.
+            </div>
+            
+          </div>
+          <div class="row c">
+              <div class="col">
+                  Juegos mas Populares:
+                  <br>
+                    <div style="flex-direction: column-reverse;" class="t">
+                      <img class="imgJuego" src="https://blog.uptodown.com/wp-content/uploads/k6kznvhfu6d71-1.png" alt="">
+                      <div class="x">
+                        <h1>Terraria</h1>
+                      </div>
+                    </div>
+                  <br>
+                  <p>
+                    uno de los estrenos mas buscados por el publico debido su trama sobre magia y hechiceria.
+                    puedes divertirte viajando al centro de la Tierra y luchando contra seres de otros mundos. 
+                  </p>
+              </div>
+              <div class="col">
+                  Juegos mas Populares:
+                  <br>
+                    <div style="flex-direction: column-reverse;" class="k" >
+                      <img class="imgJuego" src="https://www.volkgames.com/wp-content/uploads/2021/03/mortal-kombat-pel%C3%ADcula.jpg" alt="">
+                      <div class="x">
+                        <h1>Mortal kombat</h1>
+                      </div>
+                    </div>
+                  <br>
+                  <p>
+                    desde maquinas de arcade hasta la play-station los que lo juegan es como si estuviesen 
+                    peleando frente a frente. 
+                  </p>
+              </div>
+              <div class="col">
+                  Juegos mas Populares:
+                  <br>
+                    <div style="flex-direction: column-reverse;" class="ft">
+                      <img class="imgJuego" src="https://www.elcolombiano.com/binrepository/1004x565/112c0/780d565/none/11101/XULQ/whatsapp-image-2023-01-20-at-11-25-31-am_41452396_20230120165327.jpg" alt="">
+                      <div class="x">
+                        <h1>Minecraft</h1>
+                      </div>
+                    </div>
+                  <br>
+                  <p>
+                    peudes durar todo lo que quieras creando tu propio mundo a cuadritos.
+                    se un buen minero, recoclecta herramientas eppicas e interesantes y mata a los criper. 
+                  </p>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="trabajo">
+                <h1 class="text-center "><a href="#">Contactanos ya!!!</></h1></a>
+              </div>
+            </div>
+          </div>
+        </main>
+    </div>
+      <footer>
+        <div>
+            <p>VOLANTER</p>
+            <div>
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+      </footer>
+      <!-- Bootstrap JavaScript Libraries -->
+    
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs 99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+  </body>
+</html>

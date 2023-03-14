@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Contactanos</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
+    rel="stylesheet"
+  />
+  <script
+  src="https://kit.fontawesome.com/bd3a6ec486.js"
+  crossorigin="anonymous"
+></script>
+    <style>
+        .container-fluid{
+            background-color: #05070f;
+            color: white;
+        }
+        .row{
+            margin: 20px;
+        }
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.container {
+    position: relative;
+  }
+  .container::before{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    filter: blur(60px);
+    top: 0;
+    left: 0;
+  }
+  .container::after{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: rgb(150, 87, 209);
+    filter: blur(50px);
+    top: 20rem;
+    right:0 ;
+  }
+  
+
+.img{
+    width: 130px !important;
+}
+
+/* NAV */
+
+li{
+    list-style: none;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: inherit;
+    width: 100%;
+    transition: all 0.5s;
+    animation: navLogoArriba 1.5s ease;
+    z-index: 100;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+nav ul li{
+    margin: 0 20px 0 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo{
+    font-weight: 900;
+    font-size: 40px;
+    transition: opacity 0.5s;
+    animation: navLogo 2.5s ease;
+}
+
+nav ul li a{
+    transition: all 0.3s;
+}
+
+nav ul li a:hover{
+    color: rgb(187, 185, 185) !important;
+}
+
+/* FOOTER */
+
+footer div ul li i, footer div ul li a{
+    color: white;
+    opacity: 0.9;
+    font-size: 18px;
+    padding: 10px;
+    transition: opacity 0.3s;
+    text-align: right;
+    cursor: pointer;
+}
+
+footer div ul li i:hover, footer div ul li a:hover{
+    opacity: 0.7;
+}
+
+footer div ul{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+footer div{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 100;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.616);
+}
+
+      *{
+        color: white;
+        background-color: #05070f;
+        font-family: 'Salsa', cursive;
+      }
+
+.container{
+    margin: 0;
+}
+i{
+    font-size: 40px;
+}
+.col-8 {
+    flex: 0 0 auto;
+    width: 0;
+  }
+input{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-content: unset;
+    align-items: center;
+    height: 80vh;
+
+}
+
+@media (max-width: 860px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+          <div class="logo"><a style="color: white" href="./index.html">VOLANTER</a></div>
+          <ul>
+            <li><a href="./contacto.html">CONTACTENOS</a></li>
+            <li><a href="./sobreNosotros.html">ACERCA</a></li>
+            <li><a href="#">CLIENTES</a></li>
+            <li><a href="#">PRODUCTOS</a></li>
+          </ul>
+        </nav>
+      </header>
+  <main>
+<div>
+    <div class="container-fluid">
+        <div class="display-2">
+            <h2>Envianos tu inquietud:</h1>
+        </div>  
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4" style="width: 100%;">
+                <label for="nombre" class="form-label">nombre:</label>
+                <input type="text" class="form-text" id="nombre">   
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-4" style="width: 100%;">
+                <label for="favorito">juego de interes:</label>
+                <select name="videogame" id="videogame">
+                    <option value="pacman">pacman</option>
+                    <option value="terraria">terraria</option>
+                    <option value="minecraft">minecraft</option>
+                    <option value="mortalkombat">mortalkombat</option>
+                    <option value="dragoncity">dragoncity</option>
+                    <option value="mario">mario</option>
+                </select>
+                <!-- <input type="text" class="form-text"> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4" style="width: 100%;">
+                <label for="email" class="form-label">esperas respuesta a:</label>
+                <input type="email" class="form-email" placeholder="direccion de email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4" style="width: 100%;">
+                la inquietud:
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                  </div>
+            </div>
+        </div>
+        <div class="row text-end ">
+            <div class="col-8" style="width: 100%;">
+                <input type="button" style="  width: 100%;" value="~Enviala~" class="form-sumbit ">
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div>
+    <ul>
+        <li>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>Twittwer
+        </li><br><br>
+        <li>
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>Facebook
+        </li><br><br>
+        <li>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>Instagram
+        </li><br><br>
+        <li>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>Youtube
+        </li>
+      </ul>
+</div>
+    
+    </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
