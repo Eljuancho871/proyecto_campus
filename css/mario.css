@@ -215,13 +215,28 @@ h1{
     .fondo:before{
         position: inherit;
     }
+    main {
+        height: auto;
+      }
     body{
         overflow-y: visible;
     }
-    main{
+    main {
         display: flex;
         justify-content: center;
-    }
+        flex-direction: column;
+        transform: translateY(-175px);
+      }
+    .sinopsis {
+        width: 90%;
+    }     
+    main section {
+        margin: 0px;
+      } 
+      .sinopsis {
+        width: 90%;
+        margin-top: 25px;
+      }
     main section {
         transform: translate(0px, 0vh);
         display: flex;
