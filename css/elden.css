@@ -76,6 +76,10 @@ nav ul li{
     animation: navLogo 2.5s ease;
 }
 
+main section{
+    backdrop-filter: blur(10px);
+}
+
 nav ul li a{
     transition: all 0.3s;
 }
@@ -244,9 +248,6 @@ h1{
         justify-content: center;
         align-items: center;
     }    
-    nav ul{
-        display: none;
-    }
 
     footer div ul li i, footer div ul li a {
         color: white;
@@ -274,5 +275,17 @@ h1{
         margin-bottom: 10px;
         flex-direction: column;
         width: 100%;
+    }
+}
+@media (max-width: 830px){
+    nav ul {
+        flex-direction: column;
+    }
+    .nav {
+        flex-direction: column;
+    }
+    .nav {
+        flex-direction: column;
+        height: 220px;
     }
 }

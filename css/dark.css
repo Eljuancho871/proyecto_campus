@@ -42,6 +42,10 @@ main{
     align-items: center;
 }
 
+main section{
+    backdrop-filter: blur(10px);
+}
+
 .nav{
     display: flex;
     justify-content: space-between;
@@ -245,9 +249,6 @@ h1{
         justify-content: center;
         align-items: center;
     }    
-    nav ul{
-        display: none;
-    }
 
     footer div ul li i, footer div ul li a {
         color: white;
@@ -266,6 +267,20 @@ h1{
         justify-content: center;
     }
     
+}
+
+
+@media (max-width: 830px){
+    nav ul {
+        flex-direction: column;
+    }
+    .nav {
+        flex-direction: column;
+    }
+    .nav {
+        flex-direction: column;
+        height: 220px;
+    }
 }
 
 @media (max-width: 425px){

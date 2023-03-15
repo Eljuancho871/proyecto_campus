@@ -11,6 +11,11 @@ body{
     background-color: rgb(14, 13, 13);
     overflow: hidden;
 }
+
+main section{
+    backdrop-filter: blur(10px);
+}
+
 .fondo{
     background-size: cover;
     background-repeat: no-repeat;
@@ -244,10 +249,6 @@ h1{
         justify-content: center;
         align-items: center;
     }    
-    nav ul{
-        display: none;
-    }
-
     footer div ul li i, footer div ul li a {
         color: white;
         opacity: 0.9;
@@ -274,5 +275,17 @@ h1{
         margin-bottom: 10px;
         flex-direction: column;
         width: 100%;
+    }
+}
+@media (max-width: 830px){
+    nav ul {
+        flex-direction: column;
+    }
+    .nav {
+        flex-direction: column;
+    }
+    .nav {
+        flex-direction: column;
+        height: 220px;
     }
 }

@@ -55,6 +55,10 @@ background: transparent;
 position: absolute;
 }
 
+main section{
+    backdrop-filter: blur(10px);
+}
+
 .sinopsis{
     width: 700px;
 }
@@ -245,9 +249,7 @@ h1{
         justify-content: center;
         align-items: center;
     }    
-    nav ul{
-        display: none;
-    }
+
 
     footer div ul li i, footer div ul li a {
         color: white;
@@ -266,6 +268,28 @@ h1{
         justify-content: center;
     }
     
+}
+
+@media (max-width: 425px){
+    .consolas {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+@media (max-width: 830px){
+    nav ul {
+        flex-direction: column;
+    }
+    .nav {
+        flex-direction: column;
+    }
+    .nav {
+        flex-direction: column;
+        height: 220px;
+    }
 }
 
 @media (max-width: 425px){
