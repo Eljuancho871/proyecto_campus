@@ -215,12 +215,13 @@ main section ul li:hover {
     }
     body{
         overflow-y: visible;
+
+    overflow-x: hidden;
+
     } 
     .nav {
         position: inherit;
-    }
-    nav ul{
-        display: none;
+        overflow-y: auto;
     }
 
     footer div ul li i, footer div ul li a {

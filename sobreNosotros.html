@@ -30,86 +30,88 @@ a{
     width: 130px !important;
 }
 
-/* NAV */
-
-li{
-    list-style: none;
+main{
+  margin-top: 100px;
 }
 
-.nav{
+/* GLOBALES */
+
+[class$="__container"] {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+a:hover{
+  color: white;
+}
+
+/* nav */
+.nav {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  background-color: #ff000000;
+  backdrop-filter: blur(6px);
+  padding: 1rem;
+  border-bottom: 1px rgba(255, 255, 255, 0.041) solid;
+  overflow-x: auto;
+  top: 0;
+}
+a{
+  background-color: #ff000000;
+}
+.nav__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: #ff000000;
+}
+
+@media (min-width: 768px) {
+  .nav__container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    position: inherit;
-    width: 100%;
-    transition: all 0.5s;
-    animation: navLogoArriba 1.5s ease;
-    z-index: 100;
+  }
 }
 
-nav ul{
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-}
-nav ul li{
-    margin: 0 20px 0 20px;
-    font-size: 20px;
-    cursor: pointer;
+.nav__logo {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding-right: 10px;
+  background-color: #ff000000;
 }
 
-.logo{
-    font-weight: 900;
-    font-size: 40px;
-    transition: opacity 0.5s;
-    animation: navLogo 2.5s ease;
+.nav__img {
+  width: 60px;
 }
 
-nav ul li a{
-    transition: all 0.3s;
+.nav__heading {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  width: 200px;
+  background-color: #ff000000;
 }
 
-nav ul li a:hover{
-    color: rgb(187, 185, 185) !important;
+.nav__links {
+  display: flex;
+  gap: 2rem;
+  padding-right: 1rem;
+  background-color: #ff000000;
 }
 
-/* FOOTER */
-
-footer div ul li i, footer div ul li a{
-    color: white;
-    opacity: 0.9;
-    font-size: 18px;
-    padding: 10px;
-    transition: opacity 0.3s;
-    text-align: right;
-    cursor: pointer;
-}
-
-footer div ul li i:hover, footer div ul li a:hover{
-    opacity: 0.7;
-}
-
-footer div ul{
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 10px;
-}
-
-footer div{
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 100;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.616);
+.nav__link {
+  text-decoration: none;
+  color: var(--grisClaro);
 }
 
       *{
         color: white;
         background-color: #05070f;
-        font-family: 'Salsa', cursive;
       }
       .f {
         margin: 10px;
@@ -198,17 +200,22 @@ footer div{
   </head>
 
 <body>
-    <header>
-        <nav class="nav">
-          <div class="logo"><a style="color: white" href="./index.html">VOLANTER</a></div>
-          <ul>
-            <li><a href="./contacto.html">CONTACTENOS</a></li>
-            <li><a href="./sobreNosotros.html">ACERCA</a></li>
-            <li><a href="#">CLIENTES</a></li>
-            <li><a href="#">PRODUCTOS</a></li>
-          </ul>
-        </nav>
-      </header>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__container">
+        <div class="nav__logo">
+          <img class="nav__img" src="img/logo_transparent.png" alt="" />
+          <p class="nav__heading"> <a href="./index.html">VOLANTER</a> </p>
+        </div>
+        <div class="nav__links">
+            <a class="nav__link" href="./contacto.html">CONTACTENOS</a>
+            <a class="nav__link" href="./sobreNosotros.html">ACERCA</a>
+            <a class="nav__link" href="./clientes.html">CLIENTES</a>
+            <a class="nav__link" href="/servicios.html">SERVICIOS</a>
+        </div>
+      </div>
+    </nav>
+  </header>
       <main>
     <div class="container">
           <h1>Sobre nosotros:</h1>
@@ -296,16 +303,10 @@ footer div{
           </div>
         </main>
     </div>
-      <footer>
-        <div>
-            <p>VOLANTER</p>
-            <div>
-                <ul>
 
-                </ul>
-            </div>
-        </div>
-      </footer>
+  
+
+    
       <!-- Bootstrap JavaScript Libraries -->
     
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

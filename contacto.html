@@ -10,28 +10,19 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
-    rel="stylesheet"
-  />
   <script
   src="https://kit.fontawesome.com/bd3a6ec486.js"
   crossorigin="anonymous"
 ></script>
     <style>
-        .container-fluid{
-            background-color: #05070f;
-            color: white;
-        }
-        .row{
-            margin: 20px;
-        }
+      
 
 a{
     text-decoration: none;
     color: whitesmoke;
+}
+a:hover{
+    color: white;
 }
 .container {
     position: relative;
@@ -62,86 +53,83 @@ a{
     width: 130px !important;
 }
 
-/* NAV */
+/* GLOBALES */
 
-li{
-    list-style: none;
+[class$="__container"] {
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.nav{
+a:hover{
+  color: white;
+}
+
+/* nav */
+.nav {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  background-color: #ff000000;
+  backdrop-filter: blur(6px);
+  padding: 1rem;
+  border-bottom: 1px rgba(255, 255, 255, 0.041) solid;
+  overflow-x: auto;
+  top: 0;
+}
+a{
+  background-color: #ff000000;
+}
+.nav__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: #ff000000;
+}
+
+@media (min-width: 768px) {
+  .nav__container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    position: inherit;
-    width: 100%;
-    transition: all 0.5s;
-    animation: navLogoArriba 1.5s ease;
-    z-index: 100;
+  }
 }
 
-nav ul{
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-}
-nav ul li{
-    margin: 0 20px 0 20px;
-    font-size: 20px;
-    cursor: pointer;
+.nav__logo {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding-right: 10px;
+  background-color: #ff000000;
 }
 
-.logo{
-    font-weight: 900;
-    font-size: 40px;
-    transition: opacity 0.5s;
-    animation: navLogo 2.5s ease;
+.nav__img {
+  width: 60px;
 }
 
-nav ul li a{
-    transition: all 0.3s;
+.nav__heading {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  display: block;
+  width: 200px;
+  background-color: #ff000000;
 }
 
-nav ul li a:hover{
-    color: rgb(187, 185, 185) !important;
+.nav__links {
+  display: flex;
+  gap: 2rem;
+  padding-right: 1rem;
+  background-color: #ff000000;
 }
 
-/* FOOTER */
-
-footer div ul li i, footer div ul li a{
-    color: white;
-    opacity: 0.9;
-    font-size: 18px;
-    padding: 10px;
-    transition: opacity 0.3s;
-    text-align: right;
-    cursor: pointer;
+.nav__link {
+  text-decoration: none;
+  color: var(--grisClaro);
 }
-
-footer div ul li i:hover, footer div ul li a:hover{
-    opacity: 0.7;
-}
-
-footer div ul{
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 10px;
-}
-
-footer div{
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 100;
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.616);
-}
-
       *{
         color: white;
         background-color: #05070f;
-        font-family: 'Salsa', cursive;
       }
 
 .container{
@@ -154,120 +142,319 @@ i{
     flex: 0 0 auto;
     width: 0;
   }
-input{
+
+  :focus{
+    outline: none;
+}
+
+body{
+    background: #DBDBDB;
+    font-family: 'Open sans';
+}
+
+/* FORMULARIO =================================== */
+
+.form_wrap{
+    width: 1050px;
+    height: 530px;
+    margin: 50px auto;
+    display: flex;
+  
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Informacion de Contacto*/
+
+.cantact_info::before{
+    content: '';
     width: 100%;
-    border-radius: 5px;
-    border: 1px solid white;
-    padding: 10px;
-    color: white;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: #0d1328;
+    opacity: 0.9;
+}
+
+.cantact_info{
+    width: 38%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('../fondo.jpg');
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.info_title,
+.info_items{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.info_title{
+    margin-bottom: 60px;
+}
+
+.info_title span{
+    font-size: 100px;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info_title h2{
+    font-size: 35px;
+    text-align: center;
+}
+
+.info_items p{
+    display: flex;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.info_items p:nth-child(1) span{
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.info_items p:nth-child(2) span{
+    font-size: 20px;
+    margin-right: 15px;
+    margin-left: 4px;
 }
 
 
-main{
+/* Formulario de contacto*/
+form.form_contact{
+    width: 62%;
+    padding: 30px 40px;
+}
+
+form.form_contact h2{
+	font-size: 25px;
+	font-weight: 600;
+	color: white;
+	margin-bottom: 30px;
+}
+
+form.form_contact .user_info{
+    display: flex;
+    flex-direction: column;
+}
+
+form.form_contact label{
+    font-weight: 600;
+}
+
+form.form_contact input,
+form.form_contact textarea{
+    width: 100%;
+    padding: 8px 0px 5px;
+    margin-bottom: 20px;
+
+    border: none;
+    border-bottom: 2px solid #D1D1D1;
+
+    font-family: 'Open sans';
+	color: #5A5A5A;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+form.form_contact textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 90px;
+}
+
+form.form_contact input[type="button"]{
+    width: 180px;
+	background: #4091EC;
+	padding: 10px;
+	border: none;
+	border-radius: 25px;
+
+    align-self: flex-end;
+
+    color: #fff;
+	font-family: 'Open sans';
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+form.form_contact input[type="button"]:hover{
+    background: #3371B6;
+}
+
+/* Ventana de errores*/
+.modal_wrap{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
     display: flex;
     justify-content: center;
-    align-content: unset;
     align-items: center;
-    height: 80vh;
-
 }
 
-@media (max-width: 860px) {
-    main{
-        display: flex;
-        flex-direction: column;
-    }
+.mensaje_modal{
+    background: #fff;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    width: 400px;
+    padding: 30px 20px 15px;
 }
+
+.mensaje_modal h3{
+    text-align: center;
+    font-family: 'Ubuntu';
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.mensaje_modal h3:after{
+    content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #C5C5C5;
+	margin: 10px 0px 15px;
+}
+
+.mensaje_modal p{
+    font-size: 16px;
+    color: #606060;
+}
+
+.mensaje_modal p:before{
+    content: "\f00d";
+    font-family: FontAwesome;
+    display: inline-block;
+    color: #E25151;
+    margin-right: 8px;
+}
+
+#btnClose{
+    display: inline-block;
+	padding: 3px 10px;
+	margin-top: 10px;
+
+	background: #E25151;
+	color: #fff;
+	border: 2px solid #B14141;
+	cursor: pointer;
+
+	float: right;
+}
+
+
+
+section::before {
+  z-index: -1;
+  top: 55%;
+  left: 1rem;
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 70px;
+  background-color: #002d68;
+  filter: blur(60px);
+}
+
+
+@media (max-width: 1100px) {
+  .form_wrap {
+    flex-direction: column;
+    align-items: center;
+    background: #05070f;
+    width: 90%;
+}
+}
+
 
     </style>
 </head>
 
 <body>
-    <header>
-        <nav class="nav">
-          <div class="logo"><a style="color: white" href="./index.html">VOLANTER</a></div>
-          <ul>
-            <li><a href="./contacto.html">CONTACTENOS</a></li>
-            <li><a href="./sobreNosotros.html">ACERCA</a></li>
-            <li><a href="#">CLIENTES</a></li>
-            <li><a href="#">PRODUCTOS</a></li>
-          </ul>
-        </nav>
-      </header>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__container">
+        <div class="nav__logo">
+          <img class="nav__img" src="img/logo_transparent.png" alt="" />
+          <p class="nav__heading"> <a href="./index.html">VOLANTER</a> </p>
+        </div>
+        <div class="nav__links">
+            <a class="nav__link" href="./contacto.html">CONTACTENOS</a>
+            <a class="nav__link" href="./sobreNosotros.html">ACERCA</a>
+            <a class="nav__link" href="./clientes.html">CLIENTES</a>
+            <a class="nav__link" href="/servicios.html">SERVICIOS</a>
+        </div>
+      </div>
+    </nav>
+  </header>
   <main>
-<div>
-    <div class="container-fluid">
-        <div class="display-2">
-            <h2>Envianos tu inquietud:</h1>
-        </div>  
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-4" style="width: 100%;">
-                <label for="nombre" class="form-label">nombre:</label>
-                <input type="text" class="form-text" id="nombre">   
-            </div>
-            
-        </div>
 
-        <div class="row">
-            <div class="col-4" style="width: 100%;">
-                <label for="favorito">juego de interes:</label>
-                <select name="videogame" id="videogame">
-                    <option value="pacman">pacman</option>
-                    <option value="terraria">terraria</option>
-                    <option value="minecraft">minecraft</option>
-                    <option value="mortalkombat">mortalkombat</option>
-                    <option value="dragoncity">dragoncity</option>
-                    <option value="mario">mario</option>
-                </select>
-                <!-- <input type="text" class="form-text"> -->
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4" style="width: 100%;">
-                <label for="email" class="form-label">esperas respuesta a:</label>
-                <input type="email" class="form-email" placeholder="direccion de email">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4" style="width: 100%;">
-                la inquietud:
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                  </div>
-            </div>
-        </div>
-        <div class="row text-end ">
-            <div class="col-8" style="width: 100%;">
-                <input type="button" style="  width: 100%;" value="~Enviala~" class="form-sumbit ">
-            </div>
-        </div>
-        
-    </div>
-</div>
 
-<div>
-    <ul>
-        <li>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>Twittwer
-        </li><br><br>
-        <li>
-          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>Facebook
-        </li><br><br>
-        <li>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>Instagram
-        </li><br><br>
-        <li>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>Youtube
-        </li>
-      </ul>
-</div>
+
+    <div style="margin-top: 200px;">
+    <section class="form_wrap">
+
+        <section class="cantact_info">
+            <section class="info_title">
+                <img style="width: 200px;background: #0d1328;" src="./img/logo_transparent.png" alt="">
+                <h2 style="background: #0d1328;">VOLANTER</h2>
+            </section>
+            <section class="info_items">
+                <p style="background: #0d1328;"><span class="fa fa-envelope"></span> info.contact@gmail.com</p>
+                <p style="background: #0d1328;"><span class="fa fa-mobile"></span> +1(585) 902-8665</p>
+            </section>
+        </section>
+
+        <form action="" class="form_contact">
+            <h2>Envia un mensaje</h2>
+            <div class="user_info">
+                <label for="names">Nombres *</label>
+                <input type="text" id="names">
+
+                <label for="phone">Telefono / Celular</label>
+                <input type="text" id="phone">
+
+                <label for="email">Correo electronico *</label>
+                <input type="text" id="email">
+
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje"></textarea>
+
+                <input type="button" value="Enviar Mensaje" id="btnSend">
+            </div>
+        </form>
+
+    </section>
+  </div>
+    </div>
     
     </main>
-  <footer>
-    <!-- place footer here -->
-  </footer>
+  
   <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
